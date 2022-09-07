@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kube-spring
+  name: kube-spring
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kube-spring
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: kube-spring
+    spec:
+      containers:
+      - image: nklkarthi/kube-spring:0.0.1-SNAPSHOT
+        name: kube-spring
+        resources: {}
+status: {}
